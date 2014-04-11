@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JABAR</title>
+</head>
+
+<body>
+<h1>Peta Propinsi Jawa Barat</h1>
+
+<form name="form1" method="GET">
+<input type="hidden" name="map" value="[map]">
+<input type="hidden" name="imgext" value="[mapext]">
+<input type="hidden" name="imgxy" value="[center]">
+<input type="hidden" name="mode" value="browse">
+<table border="1">
+<tr>
+
+<td>
+<center><h3>Layer Aktif :</h3>
+<input type="checkbox" name="layer" value="kota" [kota_check] />PoI
+<input type="checkbox" name="layer" value="Danau" [Danau_check] />Danau
+<input type="checkbox" name="layer" value="Sungai" [Sungai_check] />Sungai
+<input type="checkbox" name="layer" value="Jalan" [Jalan_check] />Jalan</center><br />
+<input type="image" name="img" src="[img]" >
+
+<h3><center> Scale : </h3>
+<center><img src="[scalebar]" />
+</td>
+<td>
+
+<h3>Navigasi Peta</h3>
+	<select name="zoom">
+				<option value="3" [zoom_3_select]>Zoom In 3x</option>
+				<option value="2" [zoom_2_select]>Zoom In 2x</option>
+				<option value="1" [zoom_1_select]>Recenter</option>
+				<option value="-2" [zoom_-2_select]>Zoom Out 2x</option>
+				<option value="-3" [zoom_-3_select]>Zoom Out 3x</option>
+			</select>
+
+
+<input type="submit" name="submit" value="Refresh" /><br /><br />
+
+<h2>Legenda : </h2>
+<hr />
+<img src="[legend]" />
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

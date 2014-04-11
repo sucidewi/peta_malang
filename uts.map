@@ -1,0 +1,119 @@
+# File: uts.map
+#menampilkan beberapa layer hidden
+MAP
+	NAME "Jabar"
+	STATUS ON
+	EXTENT 105.060000 -7.860000 108.900000 -5.820000
+	IMAGETYPE PNG
+	SIZE 800 500
+	SHAPEPATH "../peta/shp"
+	IMAGECOLOR 255 255 255
+	
+	UNITS dd
+	
+	SYMBOLSET "../etc/simbol/symbols1.sym"
+	FONTSET "../etc/font/font.lst"
+    
+	WEB
+		TEMPLATE "uts.html"
+		IMAGEPATH "c:\ms4w\Apache\htdocs\tmp\"
+		IMAGEURL "/tmp/"
+	END
+	
+	LEGEND
+		KEYSIZE 18 12
+		LABEL
+			TYPE BITMAP
+			SIZE MEDIUM
+			COLOR 0 0 89
+		END
+		STATUS ON
+	END
+
+	SCALEBAR
+		LABEL
+			COLOR 0 0 0
+			SIZE MEDIUM
+		END
+		SIZE 350 5
+		STYLE 1
+		UNITS kilometers
+		INTERVALS 4
+		STATUS ON
+	END
+
+    LAYER
+		NAME "JawaBarat"
+		DATA "jabar.shp"
+		STATUS DEFAULT
+		TYPE POLYGON
+		LABELITEM "Name2"
+		CLASS
+			NAME "Wilayah Propinsi"
+			COLOR 225 200 100
+			OUTLINECOLOR 0 0 0
+			
+			LABEL
+				FONT arial
+				TYPE truetype
+				SIZE 7
+				POSITION AUTO
+				PARTIALS FALSE
+				OUTLINECOLOR 255 255 255
+				COLOR 0 0 255
+			END
+		END
+	END
+	
+	 LAYER
+		NAME "kota"
+		DATA "jab_kot.shp"
+		STATUS OFF
+		TYPE POINT
+		
+
+		CLASS
+			NAME "Kota Propinsi"
+			SYMBOL 7
+			SIZE 8
+			COLOR 255 0 0	
+			
+		END
+	END
+	 LAYER
+		NAME "Danau"
+		DATA "jab_danau.shp"
+		STATUS OFF
+		TYPE POLYGON
+
+		CLASS
+			NAME "Danau Jabar"
+			COLOR 102 153 255
+			OUTLINECOLOR 0 0 0
+		END
+	END
+	 LAYER
+		NAME "Sungai"
+		DATA "jab_sung.shp"
+		STATUS OFF
+		TYPE LINE
+
+		CLASS
+			NAME "Sungai Jabar"
+			COLOR 51 51 255
+			OUTLINECOLOR 0 0 0
+		END
+	END
+	LAYER
+		NAME "Jalan"
+		DATA "jab_jal.shp"
+		STATUS OFF
+		TYPE LINE
+
+		CLASS
+			NAME "Jalan Jabar"
+			COLOR 153 153 153
+			OUTLINECOLOR 0 0 0
+		END
+	END
+END
